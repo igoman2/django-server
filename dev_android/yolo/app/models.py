@@ -6,3 +6,5 @@ class Quiz(models.Model):
     answer = models.IntegerField()
 
 
+
+
