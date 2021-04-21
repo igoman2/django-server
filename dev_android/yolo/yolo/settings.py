@@ -42,12 +42,10 @@ INSTALLED_APPS = [
     'app'
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
-
+#미디어 파일을 관리할 루트 media 디렉토리
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+#각 media file에 대한 URL prefix
+MEDIA_URL = '/media/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

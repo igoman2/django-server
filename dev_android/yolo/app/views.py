@@ -1,10 +1,8 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Quiz
-from .serializers import QuizSerializer
-
+from .models import Post
+from .serializers import PostSerializer
 
 @api_view(['GET'])
-def helloAPI(request):
+def helloAPI(requsest):
     return Response("hello world!")
-# Create your views here.

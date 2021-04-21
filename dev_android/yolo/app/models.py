@@ -1,9 +1,12 @@
 from django.db import models
 
-class Quiz(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=200)
-    body = models.TextField()
-    answer = models.IntegerField()
+    photo = models.ImageField(blank=True, null=True)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.postname
 
 
 
